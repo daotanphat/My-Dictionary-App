@@ -1,0 +1,15 @@
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\bin\Debug\net6.0\BusinessObject.dll
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\bin\Debug\net6.0\BusinessObject.pdb
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.AssemblyReference.cache
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfoInputs.cache
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfo.cs
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.CoreCompileInputs.cache
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\BusinessObject.dll
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\refint\BusinessObject.dll
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\BusinessObject\bin\Debug\net6.0\appsettings.json

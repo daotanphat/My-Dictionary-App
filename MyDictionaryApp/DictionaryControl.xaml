@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="MyDictionaryApp.DictionaryControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyDictionaryApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="750">
+    <Grid>
+        <StackPanel Margin="10">
+            <Grid Margin="0 0 0 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <!-- Empty space on the left -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- For filter section -->
+                </Grid.ColumnDefinitions>
+
+                <!-- Filter controls wrapped in a StackPanel for vertical alignment -->
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <!-- Search Textbox with Watermark -->
+                    <TextBox x:Name="txtSearch" Width="160" Height="25" Margin="0 10 10 0" />
+
+                    <!-- Dropdown for Type -->
+                    <ComboBox x:Name="cbType" Width="100" Height="25" Margin="0 10 10 0" />
+
+                    <!-- Filter Button -->
+                    <Button x:Name="btnFilter" Width="50" Height="25" Content="Filter" Click="btnFilter_Click"/>
+                </StackPanel>
+
+                <!-- Button on the right side -->
+                <Button x:Name="btnAddWord" Grid.Column="0" Width="50" Height="25" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Click="btnAddWord_Click"/>
+            </Grid>
+            <!-- ListView to display members' information -->
+            <ListView x:Name="lvDictionary" Height="300" Width="700" Margin="10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID" Width="40" />
+                        <GridViewColumn Header="Word" Width="90"  />
+                        <GridViewColumn Header="Vietnamese" Width="90" />
+                        <GridViewColumn Header="Type" Width="90" />
+                        <GridViewColumn Header="Definition" Width="280"/>
+                        <GridViewColumn Header="Action" Width="100" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</UserControl>
