@@ -11,5 +11,8 @@ namespace DataAccess.Repository
 	{
 		IEnumerable<Dictionary> GetWords(bool approved);
 		void AddWord(Dictionary word);
+		Dictionary GetWordById(int wordId);
+		void UpdateWord(int wordId, Dictionary word);
+		IEnumerable<Dictionary> GetWordsByFilter(bool approved, string search, string type);
 	}
 }

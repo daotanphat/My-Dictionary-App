@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyDictionaryApp"
         mc:Ignorable="d"
-        Title="My Dictionary" Height="450" Width="800">
+        Title="My Dictionary" Height="500" Width="620"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
         <Menu VerticalAlignment="Top">
             <MenuItem x:Name="mnDictionary" Header="Dictionary" Click="mnDictionary_Click"/>

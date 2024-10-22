@@ -40,6 +40,7 @@ namespace MyDictionaryApp
 				User verifyUser = userRepository.VerifyUser(user);
 				if (verifyUser != null)
 				{
+					Application.Current.Resources["userId"] = verifyUser.Id;
 					Application.Current.Resources["username"] = verifyUser.Username;
 					Application.Current.Resources["role"] = verifyUser.RoleNavigation.RoleName;
 					MainWindow main = new MainWindow();

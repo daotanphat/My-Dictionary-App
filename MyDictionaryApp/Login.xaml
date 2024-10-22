@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:MyDictionaryApp"
         mc:Ignorable="d"
         Title="Login" Height="400" Width="500"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
         <!-- Background Panel -->
         <Border Background="#FFFFFF" CornerRadius="10" Width="400" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20">

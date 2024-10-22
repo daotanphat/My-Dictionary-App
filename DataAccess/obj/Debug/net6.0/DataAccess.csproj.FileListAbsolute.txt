@@ -14,3 +14,4 @@ F:\FPT University\Semester 7\PRN221\Project\MyDictionary\DataAccess\bin\Debug\ne
 F:\FPT University\Semester 7\PRN221\Project\MyDictionary\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
 F:\FPT University\Semester 7\PRN221\Project\MyDictionary\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
 F:\FPT University\Semester 7\PRN221\Project\MyDictionary\DataAccess\obj\Debug\net6.0\DataAccess.csproj.Up2Date
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\DataAccess\obj\Debug\net6.0\DataAccess.sourcelink.json

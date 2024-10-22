@@ -64,3 +64,8 @@ F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Deb
 F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Debug\net6.0-windows\MyDictio.F1185EDB.Up2Date
 F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Debug\net6.0-windows\DictionaryControl.g.cs
 F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Debug\net6.0-windows\DictionaryControl.baml
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Debug\net6.0-windows\MyDictionaryApp.sourcelink.json
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Debug\net6.0-windows\WordDetail.g.cs
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Debug\net6.0-windows\WordDetail.baml
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Debug\net6.0-windows\WordTypeControl.g.cs
+F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Debug\net6.0-windows\WordTypeControl.baml

@@ -24,8 +24,13 @@ namespace MyDictionaryApp
 
 		private void mnLogout_Click(object sender, RoutedEventArgs e)
 		{
-
-        }
+			Application.Current.Resources.Remove("userId");
+			Application.Current.Resources.Remove("username");
+			Application.Current.Resources.Remove("role");
+			Login login = new Login();
+			login.Show();
+			this.Close();
+		}
 
 		private void mnDictionary_Click(object sender, RoutedEventArgs e)
 		{
