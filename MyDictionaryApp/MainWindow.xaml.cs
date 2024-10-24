@@ -20,6 +20,11 @@ namespace MyDictionaryApp
 		public MainWindow()
 		{
 			InitializeComponent();
+			if (!isAdmin)
+			{
+				mnType.Visibility = Visibility.Collapsed;
+				mnApprovedWord.Visibility = Visibility.Collapsed;
+			}
 		}
 
 		private void mnLogout_Click(object sender, RoutedEventArgs e)
@@ -39,7 +44,12 @@ namespace MyDictionaryApp
 
 		private void mnType_Click(object sender, RoutedEventArgs e)
 		{
+			ContentArea.Content = new WordTypeControl();
+		}
 
+		private void mnApprovedWord_Click(object sender, RoutedEventArgs e)
+		{
+			ContentArea.Content = new ApprovedWord();
 		}
 	}
 }

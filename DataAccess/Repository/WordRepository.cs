@@ -14,6 +14,11 @@ namespace DataAccess.Repository
 			WordDAO.Instance.AddWord(word);
 		}
 
+		public bool ApprovedWord(int wordId, bool approved)
+		{
+			return WordDAO.Instance.ApprovedWord(wordId, approved);
+		}
+
 		public Dictionary GetWordById(int wordId)
 		{
 			return WordDAO.Instance.GetWordById(wordId);

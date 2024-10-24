@@ -1,0 +1,28 @@
+﻿<Window x:Class="MyDictionaryApp.WordTypeDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyDictionaryApp"
+        mc:Ignorable="d"
+        Title="WordTypeDetail" Height="300" Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="20">
+            <!-- Id -->
+            <TextBlock x:Name="lbTypeId" Text="Type ID"/>
+            <TextBox x:Name="txtTypeId" IsReadOnly="True"/>
+
+            <!-- Word -->
+            <TextBlock Text="Type Name*" Margin="0,10,0,0" />
+            <TextBox x:Name="txtTypeName" />
+            <!-- Add and Cancel Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                <Button x:Name="btnAdd" Content="Add" Width="75" Click="btnAdd_Click" />
+                <Button x:Name="btnUpdate" Content="Update" Width="75" Margin="10,0,0,0" Click="btnUpdate_Click" />
+                <Button x:Name="btnCancel" Content="Cancel" Width="75" Margin="10,0,0,0" Click="btnCancel_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

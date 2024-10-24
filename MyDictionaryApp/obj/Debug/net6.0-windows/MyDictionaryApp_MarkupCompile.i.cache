@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\obj\Debug\net6.0-windows\
+F:\FPT University\Semester 7\PRN221\My-Dictionary-App\MyDictionaryApp\obj\Debug\net6.0-windows\
 MyDictionaryApp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-F:\FPT University\Semester 7\PRN221\Project\MyDictionary\MyDictionaryApp\App.xaml
-5-1749767771
+F:\FPT University\Semester 7\PRN221\My-Dictionary-App\MyDictionaryApp\App.xaml
+7-522442192
 
-10-649448771
-222-387674930
-DictionaryControl.xaml;Login.xaml;MainWindow.xaml;WordDetail.xaml;WordTypeControl.xaml;
+122023681315
+2221776452211
+ApprovedWordControl.xaml;DictionaryControl.xaml;Login.xaml;MainWindow.xaml;WordDetail.xaml;WordTypeControl.xaml;WordTypeDetail.xaml;
 
-True
+False
 

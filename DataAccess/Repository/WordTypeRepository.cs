@@ -14,9 +14,24 @@ namespace DataAccess.Repository
 			WordTypeDAO.Instance.AddWordType(wordType);
 		}
 
+		public void deleteWordType(int wordTypeId)
+		{
+			WordTypeDAO.Instance.deleteWordType(wordTypeId);
+		}
+
 		public IEnumerable<WordType> getAlls()
 		{
 			return WordTypeDAO.Instance.GetWordTypes();
+		}
+
+		public WordType getWordTypeById(int wordTypeId)
+		{
+			return WordTypeDAO.Instance.getWordTypeById(wordTypeId);
+		}
+
+		public void updateWordType(int wordTypeId, WordType wordType)
+		{
+			WordTypeDAO.Instance.updateWordType(wordTypeId, wordType);
 		}
 	}
 }

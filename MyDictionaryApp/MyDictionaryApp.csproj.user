@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ApprovedWordControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="DictionaryControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,8 +22,14 @@
     <Compile Update="WordTypeControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="WordTypeDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ApprovedWordControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="DictionaryControl.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WordTypeControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WordTypeDetail.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

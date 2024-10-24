@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessObject;
+using DataAccess.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,47 @@ namespace MyDictionaryApp
 	/// </summary>
 	public partial class WordTypeControl : UserControl
 	{
+		private IWordTypeRepository wordTypeRepository;
 		public WordTypeControl()
 		{
 			InitializeComponent();
+			wordTypeRepository = new WordTypeRepository();
+			LoadWordType();
+		}
+
+		private void btnAddType_Click(object sender, RoutedEventArgs e)
+		{
+			WordTypeDetail wordTypeDetail = new WordTypeDetail("Add", 0);
+			wordTypeDetail.WordTypeLoad += WordTypeDetail_WordTypeLoad;
+			wordTypeDetail.ShowDialog();
+		}
+
+		private void WordTypeDetail_WordTypeLoad(object? sender, EventArgs e)
+		{
+			LoadWordType();
+		}
+
+		private void lvWordType_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+		{
+			if (lvWordType.SelectedItem is WordType selectedType)
+			{
+				WordTypeDetail wordTypeDetail = new WordTypeDetail("Detail", selectedType.Id);
+				wordTypeDetail.ShowDialog();
+				lvWordType.SelectedItem = null;
+			}
+		}
+
+		public void LoadWordType()
+		{
+			try
+			{
+				List<WordType> wordTypes = (List<WordType>)wordTypeRepository.getAlls();
+				lvWordType.ItemsSource = wordTypes;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Load Word Type");
+			}
 		}
 	}
 }

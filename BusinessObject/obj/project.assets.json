@@ -2345,11 +2345,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FPT University\\Semester 7\\PRN221\\Project\\MyDictionary\\BusinessObject\\BusinessObject.csproj",
+      "projectUniqueName": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj",
       "projectName": "BusinessObject",
-      "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\MyDictionary\\BusinessObject\\BusinessObject.csproj",
+      "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\MyDictionary\\BusinessObject\\obj\\",
+      "outputPath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\BusinessObject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",

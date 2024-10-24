@@ -10,6 +10,9 @@ namespace DataAccess.Repository
 	public interface IWordTypeRepository
 	{
 		IEnumerable<WordType> getAlls();
+		WordType getWordTypeById(int wordTypeId);
 		void addWordType(WordType wordType);
+		void deleteWordType(int wordTypeId);
+		void updateWordType(int wordTypeId, WordType wordType);
 	}
 }

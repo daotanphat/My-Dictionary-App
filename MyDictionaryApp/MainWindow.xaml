@@ -12,6 +12,7 @@
         <Menu VerticalAlignment="Top">
             <MenuItem x:Name="mnDictionary" Header="Dictionary" Click="mnDictionary_Click"/>
             <MenuItem x:Name="mnType" Header="Category" Click="mnType_Click"/>
+            <MenuItem x:Name="mnApprovedWord" Header="Approved Word" Click="mnApprovedWord_Click"/>
             <MenuItem x:Name="mnLogout" Header="Logout" Click="mnLogout_Click" />
         </Menu>
 

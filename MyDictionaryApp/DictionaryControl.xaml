@@ -28,8 +28,13 @@
                     <Button x:Name="btnFilter" Width="50" Height="25" Content="Filter" Click="btnFilter_Click"/>
                 </StackPanel>
 
-                <!-- Button on the right side -->
-                <Button x:Name="btnAddWord" Grid.Column="0" Width="50" Height="25" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Click="btnAddWord_Click"/>
+                <!-- Buttons for adding and deleting words -->
+                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <!-- Add Button -->
+                    <Button x:Name="btnAddWord" Width="50" Height="25" Content="Add" Margin="10,0,5,0" Click="btnAddWord_Click"/>
+                    <!-- Delete Button -->
+                    <Button x:Name="btnDeleteWord" Width="50" Height="25" Content="Delete" Click="btnDeleteWord_Click"/>
+                </StackPanel>
             </Grid>
             <!-- ListView to display members' information -->
             <ListView x:Name="lvDictionary" Height="300" Width="530" Margin="10" MouseDoubleClick="lvDictionary_MouseDoubleClick">

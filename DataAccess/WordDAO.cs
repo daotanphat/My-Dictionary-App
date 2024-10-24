@@ -38,11 +38,8 @@ namespace DataAccess
 				{
 					dictionaries = myDB.Dictionaries
 						.Include(w => w.WordTypeNavigation)
+						.Where(d => d.IsApproved == approved)
 						.ToList();
-					if (approved)
-					{
-						dictionaries = dictionaries.Where(d => d.IsApproved).ToList();
-					}
 				}
 			}
 			catch (Exception ex)
@@ -153,7 +150,7 @@ namespace DataAccess
 						.FirstOrDefault(d => d.Id == wordId);
 					if (dictionary == null)
 					{
-						throw new Exception($"{dictionary} is not exist!");
+						throw new Exception("Word is not exist!");
 					}
 
 					Dictionary word1 = myDB.Dictionaries
@@ -177,6 +174,66 @@ namespace DataAccess
 						EditBy = word.CreateBy
 					};
 					myDB.EditHistories.Add(editHistory);
+					myDB.SaveChanges();
+				}
+			}
+			catch (Exception ex)
+			{
+				throw new Exception(ex.Message);
+			}
+		}
+
+		public bool ApprovedWord(int wordId, bool approved)
+		{
+			try
+			{
+				List<int> removeWordId = new List<int>();
+				removeWordId.Add(wordId);
+				using (var myDB = new MyDictionaryContext())
+				{
+					Dictionary dictionary = myDB.Dictionaries
+						.Include(d => d.WordTypeNavigation)
+						.FirstOrDefault(d => d.Id == wordId);
+					if (dictionary == null)
+					{
+						throw new Exception($"{dictionary} is not exist!");
+					}
+					if (approved)
+					{
+						dictionary.IsApproved = approved;
+						myDB.SaveChanges();
+					}
+					else
+					{
+						DeleteWords(removeWordId);
+					}
+				}
+				return approved;
+			}
+			catch (Exception ex)
+			{
+				throw new Exception(ex.Message);
+			}
+		}
+
+		public void DeleteWords(List<int> wordIds)
+		{
+			try
+			{
+				using (var myDB = new MyDictionaryContext())
+				{
+					foreach (var wordId in wordIds)
+					{
+						Dictionary dictionary = myDB.Dictionaries.FirstOrDefault(d => d.Id == wordId);
+						if (dictionary != null)
+						{
+							myDB.Dictionaries.Remove(dictionary);
+						}
+						else
+						{
+							throw new Exception($"Word with ID {wordId} does not exist!");
+						}
+					}
 					myDB.SaveChanges();
 				}
 			}

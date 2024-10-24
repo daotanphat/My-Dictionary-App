@@ -18,14 +18,14 @@
 
                 <!-- Username Label and TextBox -->
                 <TextBlock Text="Username" FontSize="16" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtUsername" Height="35" Padding="10" FontSize="14" BorderBrush="#CCCCCC" BorderThickness="1" Background="#F7F7F7"/>
+                <TextBox x:Name="txtUsername" Height="35" Padding="5" FontSize="14" BorderBrush="#CCCCCC" BorderThickness="1" Background="#F7F7F7"/>
 
                 <!-- Spacer -->
                 <TextBlock Margin="0,10,0,0"/>
 
                 <!-- Password Label and PasswordBox -->
                 <TextBlock Text="Password" FontSize="16" Margin="0,0,0,5"/>
-                <PasswordBox x:Name="txtPassword" Height="35" Padding="10" FontSize="14" BorderBrush="#CCCCCC" BorderThickness="1" Background="#F7F7F7"/>
+                <PasswordBox x:Name="txtPassword" Height="35" Padding="5" FontSize="14" BorderBrush="#CCCCCC" BorderThickness="1" Background="#F7F7F7"/>
 
                 <!-- Spacer -->
                 <TextBlock Margin="0,10,0,0"/>

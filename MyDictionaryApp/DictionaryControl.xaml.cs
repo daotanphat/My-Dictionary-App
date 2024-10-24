@@ -31,6 +31,10 @@ namespace MyDictionaryApp
 			wordRepository = new WordRepository();
 			wordTypeRepository = new WordTypeRepository();
 			this.isAdmin = isAdmin;
+			if (!isAdmin)
+			{
+				btnDeleteWord.Visibility = Visibility.Collapsed;
+			}
 			LoadDictionary();
 			LoadWordTypes();
 		}
@@ -50,14 +54,7 @@ namespace MyDictionaryApp
 		{
 			try
 			{
-				if (!isAdmin)
-				{
-					lvDictionary.ItemsSource = wordRepository.GetWords(true);
-				}
-				else
-				{
-					lvDictionary.ItemsSource = wordRepository.GetWords(false);
-				}
+				lvDictionary.ItemsSource = wordRepository.GetWords(true);
 			}
 			catch (Exception ex)
 			{
@@ -83,7 +80,7 @@ namespace MyDictionaryApp
 
 		private void btnAddWord_Click(object sender, RoutedEventArgs e)
 		{
-			WordDetail wordDetail = new WordDetail("Add", 0);
+			WordDetail wordDetail = new WordDetail("Add", 0, isAdmin);
 			wordDetail.WordLoad += WordDetail_WordLoad1;
 			wordDetail.Show();
 		}
@@ -97,7 +94,7 @@ namespace MyDictionaryApp
 		{
 			Button button = sender as Button;
 			int wordId = (int)button.CommandParameter;
-			WordDetail wordDetail = new WordDetail("Detail", wordId);
+			WordDetail wordDetail = new WordDetail("Detail", wordId, isAdmin);
 			wordDetail.ShowDialog();
 		}
 
@@ -105,10 +102,15 @@ namespace MyDictionaryApp
 		{
 			if (lvDictionary.SelectedItem is Dictionary selectedWord)
 			{
-				WordDetail wordDetail = new WordDetail("Detail", selectedWord.Id);
+				WordDetail wordDetail = new WordDetail("Detail", selectedWord.Id, isAdmin);
 				wordDetail.ShowDialog();
 				lvDictionary.SelectedItem = null;
 			}
+		}
+
+		private void btnDeleteWord_Click(object sender, RoutedEventArgs e)
+		{
+
 		}
 	}
 }

@@ -24,14 +24,20 @@ namespace MyDictionaryApp
 		public event EventHandler WordLoad;
 		private IWordRepository wordRepository;
 		private IWordTypeRepository wordTypeRepository;
-		public WordDetail(string action, int wordId)
+		private bool isAdmin;
+		public WordDetail(string action, int wordId, bool isAdmin)
 		{
 			InitializeComponent();
 			wordRepository = new WordRepository();
 			wordTypeRepository = new WordTypeRepository();
+			this.isAdmin = isAdmin;
 			cboWordType.ItemsSource = wordTypeRepository.getAlls();
 			cboWordType.DisplayMemberPath = "TypeName";
 			cboWordType.SelectedValuePath = "Id";
+			if (isAdmin)
+			{
+				btnUpdate.Visibility = Visibility.Collapsed;
+			}
 			if (action.Equals("Detail"))
 			{
 				LoadWord(wordId);
@@ -51,7 +57,6 @@ namespace MyDictionaryApp
 			{
 				if (checkValidWord())
 				{
-					bool isAdmin = Application.Current.Resources["role"] as string == "ADMIN";
 					bool isApproved = isAdmin;
 					int createBy = Convert.ToInt32(Application.Current.Resources["userId"]);
 					Dictionary word = new Dictionary
@@ -64,8 +69,16 @@ namespace MyDictionaryApp
 						CreateBy = createBy
 					};
 					wordRepository.AddWord(word);
-					WordLoad?.Invoke(this, EventArgs.Empty);
-					MessageBox.Show($"Add word {word.Word} successfully!");
+					if (isAdmin)
+					{
+						WordLoad?.Invoke(this, EventArgs.Empty);
+						MessageBox.Show($"Add word {word.Word} successfully!", "Add Word");
+					}
+					else
+					{
+						MessageBox.Show($"Your request to add a new word '{txtWord.Text}' has been sent to the admin.", "Suggest Word");
+					}
+
 					this.Close();
 				}
 			}
