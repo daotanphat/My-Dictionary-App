@@ -145,32 +145,36 @@ namespace DataAccess
 			{
 				using (var myDB = new MyDictionaryContext())
 				{
-					Dictionary dictionary = myDB.Dictionaries
+					Dictionary existWord = myDB.Dictionaries
 						.Include(d => d.WordTypeNavigation)
 						.FirstOrDefault(d => d.Id == wordId);
-					if (dictionary == null)
+					if (existWord == null)
 					{
 						throw new Exception("Word is not exist!");
 					}
 
-					Dictionary word1 = myDB.Dictionaries
+					Dictionary duplicatedWord = myDB.Dictionaries
 						.Include(d => d.WordTypeNavigation)
-						.FirstOrDefault(d => d.Word.Equals(word.Word) && d.WordType == word.WordType);
-					if (word1 != null)
+						.FirstOrDefault(d => d.Word.ToLower().Equals(word.Word.ToLower())
+												&& d.WordType == word.WordType);
+					if (duplicatedWord != null)
 					{
-						throw new Exception($"{word.Word} - {word1.WordTypeNavigation.TypeName} is already exist!");
+						throw new Exception($"{word.Word} - {duplicatedWord.WordTypeNavigation.TypeName} is already exist!");
 					}
 
-					myDB.Entry<Dictionary>(word).State = EntityState.Modified;
+					existWord.Word = word.Word;
+					existWord.Vietnamese = word.Vietnamese;
+					existWord.Meaning = word.Meaning;
+					existWord.WordType = word.WordType;
 					myDB.SaveChanges();
 
 					EditHistory editHistory = new EditHistory
 					{
 						WordId = wordId,
-						OldWord = dictionary.Word,
-						OldVietnamese = dictionary.Vietnamese,
+						OldWord = existWord.Word,
+						OldVietnamese = existWord.Vietnamese,
 						NewWord = word.Word,
-						NewVietnamese = dictionary.Vietnamese,
+						NewVietnamese = word.Vietnamese,
 						EditBy = word.CreateBy
 					};
 					myDB.EditHistories.Add(editHistory);
@@ -234,6 +238,9 @@ namespace DataAccess
 							throw new Exception($"Word with ID {wordId} does not exist!");
 						}
 					}
+					List<EditHistory> editHistory = myDB.EditHistories
+														.Where(e => wordIds.Contains(e.WordId)).ToList();
+					myDB.EditHistories.RemoveRange(editHistory);
 					myDB.SaveChanges();
 				}
 			}

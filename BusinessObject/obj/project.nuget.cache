@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ar/4lYFAewZfNyzyIyGcok/yae+CWOfl9Fwlh7ZvxZeJ+pOJuZ/PMEmDpM76BtszWj1KhpiZdsd3IgRqyflQ6g==",
+  "dgSpecHash": "ReDbYiFfGVTLGPOFQKMqHMNPIxi8WGQFNXwmka656k3z3LMqj1cEVhhfCGocWBvFjcI4t3Xfgb3lgdXZw2Kegg==",
   "success": true,
-  "projectFilePath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj",
+  "projectFilePath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

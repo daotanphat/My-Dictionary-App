@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qcv4pDj/80LAmiMPX473xEqiDwJd87RSdHGxp3XieidwfGaXX/W8zlE2QPolYMlfGt/mQNBW1IoFW7msORk1uw==",
+  "dgSpecHash": "m2djtg33f+2d5+MAwr/rpOg/0QA4edcAF0Q236uA963KWoSdCUt8dq99UxM/KXyXA7uejyxLBrNMDYwEZ8H8rA==",
   "success": true,
-  "projectFilePath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\MyDictionaryApp\\MyDictionaryApp.csproj",
+  "projectFilePath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\MyDictionaryApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

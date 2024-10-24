@@ -1,6 +1,7 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,6 +48,7 @@ namespace MyDictionaryApp
 			if (lvWordType.SelectedItem is WordType selectedType)
 			{
 				WordTypeDetail wordTypeDetail = new WordTypeDetail("Detail", selectedType.Id);
+				wordTypeDetail.WordTypeLoad += WordTypeDetail_WordTypeLoad;
 				wordTypeDetail.ShowDialog();
 				lvWordType.SelectedItem = null;
 			}
@@ -62,6 +64,24 @@ namespace MyDictionaryApp
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message, "Load Word Type");
+			}
+		}
+
+		private void btnDeleteType_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+
+				if (lvWordType.SelectedItem is WordType selectedType)
+				{
+					wordTypeRepository.deleteWordType(selectedType.Id);
+					LoadWordType();
+					MessageBox.Show("Delete word type successfully!");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Delete word");
 			}
 		}
 	}

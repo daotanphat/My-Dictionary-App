@@ -2317,11 +2317,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\MyDictionaryApp\\MyDictionaryApp.csproj",
+      "projectUniqueName": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\MyDictionaryApp.csproj",
       "projectName": "MyDictionaryApp",
-      "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\MyDictionaryApp\\MyDictionaryApp.csproj",
+      "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\MyDictionaryApp.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\MyDictionaryApp\\obj\\",
+      "outputPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2338,11 +2338,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj"
+            "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj"
             },
-            "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\DataAccess\\DataAccess.csproj"
+            "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\DataAccess\\DataAccess.csproj"
             }
           }
         }

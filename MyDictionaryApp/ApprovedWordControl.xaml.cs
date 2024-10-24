@@ -1,5 +1,7 @@
-﻿using DataAccess.Repository;
+﻿using BusinessObject;
+using DataAccess.Repository;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,17 +36,56 @@ namespace MyDictionaryApp
 
 		private void btnDeleteWord_Click(object sender, RoutedEventArgs e)
 		{
-
+			try
+			{
+				var selectedItems = lvApprovedWord.SelectedItems;
+				if (selectedItems.Count > 0)
+				{
+					List<int> wordIds = new List<int>();
+					foreach (var item in selectedItems)
+					{
+						var selectedItem = item as Dictionary;
+						if (selectedItem != null)
+						{
+							wordIds.Add(selectedItem.Id);
+						}
+					}
+					wordRepository.DeleteWord(wordIds);
+					LoadApprovedWords();
+					MessageBox.Show("Reject word successfully!");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Approved word");
+			}
 		}
 
 		private void lvApprovedWord_MouseDoubleClick(object sender, MouseButtonEventArgs e)
 		{
+			if (lvApprovedWord.SelectedItem is Dictionary selectedWord)
+			{
+				WordDetail wordDetail = new WordDetail("ApprovedDetail", selectedWord.Id, true);
+				wordDetail.ShowDialog();
+				lvApprovedWord.SelectedItem = null;
+			}
 
 		}
 
 		private void btnApproved_Click(object sender, RoutedEventArgs e)
 		{
-
+			try
+			{
+				Button button = sender as Button;
+				int wordId = (int)button.CommandParameter;
+				wordRepository.ApprovedWord(wordId, true);
+				MessageBox.Show($"You have already approved add new word!");
+				LoadApprovedWords();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Approved Word");
+			}
 		}
 
 		private void LoadApprovedWords()

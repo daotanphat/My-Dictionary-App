@@ -14,7 +14,7 @@ namespace DataAccess.Repository
 		Dictionary GetWordById(int wordId);
 		void UpdateWord(int wordId, Dictionary word);
 		IEnumerable<Dictionary> GetWordsByFilter(bool approved, string search, string type);
-
 		bool ApprovedWord(int wordId, bool approved);
+		void DeleteWord(List<int> wordIds);
 	}
 }

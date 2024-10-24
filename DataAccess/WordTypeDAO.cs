@@ -83,6 +83,21 @@ namespace DataAccess
 					{
 						throw new Exception($"{wordType.TypeName} is not exist!");
 					}
+					List<Dictionary> words = myDB.Dictionaries
+						.Include(w => w.WordTypeNavigation)
+						.Where(w => w.WordTypeNavigation.Id == wordTypeId)
+						.ToList();
+					myDB.Dictionaries.RemoveRange(words);
+
+					List<int> wordIds = words.Select(w => w.Id).ToList();
+					if (wordIds.Any())
+					{
+						List<EditHistory> editHistories = myDB.EditHistories
+						.Where(e => wordIds.Contains(e.WordId))
+						.ToList();
+						myDB.EditHistories.RemoveRange(editHistories);
+					}
+
 					myDB.WordTypes.Remove(wordType);
 					myDB.SaveChanges();
 				}
@@ -107,13 +122,13 @@ namespace DataAccess
 					}
 
 					WordType wordType2 = myDB.WordTypes
-						.FirstOrDefault(w => w.TypeName.Equals(wordType.TypeName));
+						.FirstOrDefault(w => w.TypeName.ToLower().Equals(wordType.TypeName.ToLower()));
 					if (wordType2 != null)
 					{
 						throw new Exception($"{wordType.TypeName} is already exist!");
 					}
 
-					myDB.Entry<WordType>(wordType).State = EntityState.Modified;
+					wordType1.TypeName = wordType.TypeName;
 					myDB.SaveChanges();
 				}
 			}

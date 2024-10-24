@@ -103,6 +103,7 @@ namespace MyDictionaryApp
 			if (lvDictionary.SelectedItem is Dictionary selectedWord)
 			{
 				WordDetail wordDetail = new WordDetail("Detail", selectedWord.Id, isAdmin);
+				wordDetail.WordLoad += WordDetail_WordLoad1;
 				wordDetail.ShowDialog();
 				lvDictionary.SelectedItem = null;
 			}
@@ -110,7 +111,29 @@ namespace MyDictionaryApp
 
 		private void btnDeleteWord_Click(object sender, RoutedEventArgs e)
 		{
-
+			try
+			{
+				var selectedItems = lvDictionary.SelectedItems;
+				if (selectedItems.Count > 0)
+				{
+					List<int> wordIds = new List<int>();
+					foreach (var item in selectedItems)
+					{
+						var selectedItem = item as Dictionary;
+						if (selectedItem != null)
+						{
+							wordIds.Add(selectedItem.Id);
+						}
+					}
+					wordRepository.DeleteWord(wordIds);
+					LoadDictionary();
+					MessageBox.Show("Delete word successfully!");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Delete word");
+			}
 		}
 	}
 }

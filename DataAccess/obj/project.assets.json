@@ -2298,11 +2298,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\DataAccess\\DataAccess.csproj",
+      "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\DataAccess\\obj\\",
+      "outputPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2319,8 +2319,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj"
+            "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\BusinessObject\\BusinessObject.csproj"
             }
           }
         }

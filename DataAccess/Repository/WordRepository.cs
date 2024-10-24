@@ -19,6 +19,11 @@ namespace DataAccess.Repository
 			return WordDAO.Instance.ApprovedWord(wordId, approved);
 		}
 
+		public void DeleteWord(List<int> wordIds)
+		{
+			WordDAO.Instance.DeleteWords(wordIds);
+		}
+
 		public Dictionary GetWordById(int wordId)
 		{
 			return WordDAO.Instance.GetWordById(wordId);

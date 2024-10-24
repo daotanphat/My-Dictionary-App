@@ -61,7 +61,22 @@ namespace MyDictionaryApp
 
 		private void btnUpdate_Click(object sender, RoutedEventArgs e)
 		{
-
+			try
+			{
+				int wordTypeId = Convert.ToInt32(txtTypeId.Text);
+				WordType wordType = new WordType
+				{
+					TypeName = txtTypeName.Text
+				};
+				wordTypeRepository.updateWordType(wordTypeId, wordType);
+				MessageBox.Show($"Update word type {txtTypeName.Text} success!");
+				WordTypeLoad?.Invoke(sender, EventArgs.Empty);
+				this.Close();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Update Word Type");
+			}
 		}
 
 		private void btnCancel_Click(object sender, RoutedEventArgs e)

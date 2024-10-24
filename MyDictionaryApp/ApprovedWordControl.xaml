@@ -35,7 +35,7 @@
                 </StackPanel>
             </Grid>
             <!-- ListView to display members' information -->
-            <ListView x:Name="lvApprovedWord" Height="300" Width="530" Margin="10" MouseDoubleClick="lvApprovedWord_MouseDoubleClick">
+            <ListView x:Name="lvApprovedWord" Height="300" Width="530" Margin="10" SelectionMode="Multiple" MouseDoubleClick="lvApprovedWord_MouseDoubleClick">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ID" Width="40" DisplayMemberBinding="{Binding Id}" />

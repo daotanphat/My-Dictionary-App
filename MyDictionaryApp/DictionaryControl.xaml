@@ -37,7 +37,7 @@
                 </StackPanel>
             </Grid>
             <!-- ListView to display members' information -->
-            <ListView x:Name="lvDictionary" Height="300" Width="530" Margin="10" MouseDoubleClick="lvDictionary_MouseDoubleClick">
+            <ListView x:Name="lvDictionary" Height="300" Width="530" Margin="10" SelectionMode="Multiple" MouseDoubleClick="lvDictionary_MouseDoubleClick">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ID" Width="40" DisplayMemberBinding="{Binding Id}" />

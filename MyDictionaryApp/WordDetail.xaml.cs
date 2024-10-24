@@ -34,9 +34,13 @@ namespace MyDictionaryApp
 			cboWordType.ItemsSource = wordTypeRepository.getAlls();
 			cboWordType.DisplayMemberPath = "TypeName";
 			cboWordType.SelectedValuePath = "Id";
-			if (isAdmin)
+			if (!isAdmin)
 			{
 				btnUpdate.Visibility = Visibility.Collapsed;
+				txtWord.IsReadOnly = true;
+				txtVietnamese.IsReadOnly = true;
+				txtDefinition.IsReadOnly = true;
+				cboWordType.IsEnabled = false;
 			}
 			if (action.Equals("Detail"))
 			{
@@ -48,6 +52,19 @@ namespace MyDictionaryApp
 				lbWordId.Visibility = Visibility.Collapsed;
 				txtWordId.Visibility = Visibility.Collapsed;
 				btnUpdate.Visibility = Visibility.Collapsed;
+			}
+			else if (action.Equals("ApprovedDetail"))
+			{
+				LoadWord(wordId);
+				lbWordId.Visibility = Visibility.Collapsed;
+				txtWordId.Visibility = Visibility.Collapsed;
+				btnUpdate.Visibility = Visibility.Collapsed;
+				btnAdd.Visibility = Visibility.Collapsed;
+
+				txtWord.IsReadOnly = true;
+				txtVietnamese.IsReadOnly = true;
+				txtDefinition.IsReadOnly = true;
+				cboWordType.IsEnabled = false;
 			}
 		}
 
@@ -101,13 +118,7 @@ namespace MyDictionaryApp
 			txtWord.Text = word.Word.ToString();
 			txtVietnamese.Text = word.Vietnamese.ToString();
 			txtDefinition.Text = word.Meaning.ToString();
-			cboWordType.SelectedItem = wordTypeRepository.getAlls()
-							   .FirstOrDefault(wt => wt.Id == word.WordTypeNavigation.Id);
-
-			txtWord.IsReadOnly = true;
-			txtVietnamese.IsReadOnly = true;
-			txtDefinition.IsReadOnly = true;
-			cboWordType.IsReadOnly = true;
+			cboWordType.SelectedValue = word.WordType;
 		}
 
 		private bool checkValidWord()
@@ -138,7 +149,30 @@ namespace MyDictionaryApp
 
 		private void btnUpdate_Click(object sender, RoutedEventArgs e)
 		{
-
+			try
+			{
+				if (checkValidWord())
+				{
+					int createBy = Convert.ToInt32(Application.Current.Resources["userId"]);
+					int wordId = Convert.ToInt32(txtWordId.Text);
+					Dictionary word = new Dictionary
+					{
+						Word = txtWord.Text,
+						Vietnamese = txtVietnamese.Text,
+						WordType = (int)cboWordType.SelectedValue,
+						Meaning = txtDefinition.Text,
+						CreateBy = createBy
+					};
+					wordRepository.UpdateWord(wordId, word);
+					WordLoad?.Invoke(this, EventArgs.Empty);
+					MessageBox.Show($"Update word {word.Word} successfully!", "Update Word");
+					this.Close();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error Message");
+			}
 		}
 	}
 }
