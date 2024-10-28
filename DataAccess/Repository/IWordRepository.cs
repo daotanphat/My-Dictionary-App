@@ -16,5 +16,6 @@ namespace DataAccess.Repository
 		IEnumerable<Dictionary> GetWordsByFilter(bool approved, string search, string type);
 		bool ApprovedWord(int wordId, bool approved);
 		void DeleteWord(List<int> wordIds);
+		IEnumerable<EditHistory> GetEditHistory(int wordId);
 	}
 }

@@ -24,6 +24,11 @@ namespace DataAccess.Repository
 			WordDAO.Instance.DeleteWords(wordIds);
 		}
 
+		public IEnumerable<EditHistory> GetEditHistory(int wordId)
+		{
+			return WordDAO.Instance.EditHistories(wordId);
+		}
+
 		public Dictionary GetWordById(int wordId)
 		{
 			return WordDAO.Instance.GetWordById(wordId);

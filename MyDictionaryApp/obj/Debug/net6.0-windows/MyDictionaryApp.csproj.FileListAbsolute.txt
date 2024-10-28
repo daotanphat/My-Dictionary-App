@@ -221,3 +221,5 @@ F:\FPT University\Semester 7\PRN221\Project\My-Dictionary-App\MyDictionaryApp\ob
 F:\FPT University\Semester 7\PRN221\Project\My-Dictionary-App\MyDictionaryApp\obj\Debug\net6.0-windows\ref\MyDictionaryApp.dll
 F:\FPT University\Semester 7\PRN221\Project\My-Dictionary-App\MyDictionaryApp\obj\Debug\net6.0-windows\Register.g.cs
 F:\FPT University\Semester 7\PRN221\Project\My-Dictionary-App\MyDictionaryApp\obj\Debug\net6.0-windows\Register.baml
+F:\FPT University\Semester 7\PRN221\Project\My-Dictionary-App\MyDictionaryApp\obj\Debug\net6.0-windows\EditHistory.g.cs
+F:\FPT University\Semester 7\PRN221\Project\My-Dictionary-App\MyDictionaryApp\obj\Debug\net6.0-windows\EditHistory.baml

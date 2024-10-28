@@ -249,5 +249,26 @@ namespace DataAccess
 				throw new Exception(ex.Message);
 			}
 		}
+
+		public IEnumerable<EditHistory> EditHistories(int wordId)
+		{
+			List<EditHistory> editHistories = new List<EditHistory>();
+			try
+			{
+				using (var myDB = new MyDictionaryContext())
+				{
+					editHistories = myDB.EditHistories
+						.Include(e => e.EditByNavigation)
+						.Where(e => e.WordId == wordId)
+						.OrderByDescending(e => e.EditDate)
+						.ToList();
+				}
+			}
+			catch (Exception ex)
+			{
+				throw new Exception(ex.Message);
+			}
+			return editHistories;
+		}
 	}
 }

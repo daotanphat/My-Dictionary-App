@@ -94,8 +94,8 @@ namespace MyDictionaryApp
 		{
 			Button button = sender as Button;
 			int wordId = (int)button.CommandParameter;
-			WordDetail wordDetail = new WordDetail("Detail", wordId, isAdmin);
-			wordDetail.ShowDialog();
+			EditHistory editHistory = new EditHistory(wordId);
+			editHistory.ShowDialog();
 		}
 
 		private void lvDictionary_MouseDoubleClick(object sender, MouseButtonEventArgs e)

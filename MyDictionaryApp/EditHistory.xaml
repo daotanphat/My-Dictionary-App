@@ -1,0 +1,27 @@
+﻿<Window x:Class="MyDictionaryApp.EditHistory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyDictionaryApp"
+        mc:Ignorable="d"
+        Title="EditHistory" Height="350" Width="700"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="10">
+            <ListView x:Name="lvHistory" Height="300" Width="650" Margin="10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID" Width="40" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="OldWord" Width="120" DisplayMemberBinding="{Binding OldWord}" />
+                        <GridViewColumn Header="NewWord" Width="120" DisplayMemberBinding="{Binding NewWord}" />
+                        <GridViewColumn Header="OldVietnamese" Width="120" DisplayMemberBinding="{Binding OldVietnamese}" />
+                        <GridViewColumn Header="NewVietnamese" Width="120" DisplayMemberBinding="{Binding NewVietnamese}" />
+                        <GridViewColumn Header="UpdateAt" Width="120" DisplayMemberBinding="{Binding EditDate}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>

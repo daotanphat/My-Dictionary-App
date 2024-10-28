@@ -45,8 +45,8 @@ namespace MyDictionaryApp
 				{
 					userRepository.AddUser(user);
 					MessageBox.Show("Register successfully!", "Register");
-					this.Close();
 					Login login = new Login();
+					this.Close();
 					login.ShowDialog();
 				}
 				catch (Exception ex)
@@ -92,7 +92,7 @@ namespace MyDictionaryApp
 			}
 			else
 			{
-				if (!txtConfirmPassword.Equals(txtPassword))
+				if (!txtConfirmPassword.Password.Equals(txtPassword.Password))
 				{
 					msg += "Confirm password does not match!\n";
 				}

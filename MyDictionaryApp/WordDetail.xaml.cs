@@ -34,18 +34,19 @@ namespace MyDictionaryApp
 			cboWordType.ItemsSource = wordTypeRepository.getAlls();
 			cboWordType.DisplayMemberPath = "TypeName";
 			cboWordType.SelectedValuePath = "Id";
-			if (!isAdmin)
-			{
-				btnUpdate.Visibility = Visibility.Collapsed;
-				txtWord.IsReadOnly = true;
-				txtVietnamese.IsReadOnly = true;
-				txtDefinition.IsReadOnly = true;
-				cboWordType.IsEnabled = false;
-			}
+
 			if (action.Equals("Detail"))
 			{
 				LoadWord(wordId);
 				btnAdd.Visibility = Visibility.Collapsed;
+				if (!isAdmin)
+				{
+					btnUpdate.Visibility = Visibility.Collapsed;
+					txtWord.IsReadOnly = true;
+					txtVietnamese.IsReadOnly = true;
+					txtDefinition.IsReadOnly = true;
+					cboWordType.IsEnabled = false;
+				}
 			}
 			else if (action.Equals("Add"))
 			{
