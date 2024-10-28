@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|f:\\fpt university\\semester 7\\prn221\\project\\my-dictionary-app\\mydictionaryapp\\wordtypecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|solutionrelative:mydictionaryapp\\wordtypecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|f:\\fpt university\\semester 7\\prn221\\project\\my-dictionary-app\\mydictionaryapp\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|solutionrelative:mydictionaryapp\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|f:\\fpt university\\semester 7\\prn221\\project\\my-dictionary-app\\mydictionaryapp\\wordtypecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|solutionrelative:mydictionaryapp\\wordtypecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|f:\\fpt university\\semester 7\\prn221\\project\\my-dictionary-app\\mydictionaryapp\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|solutionrelative:mydictionaryapp\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|f:\\fpt university\\semester 7\\prn221\\project\\my-dictionary-app\\mydictionaryapp\\dictionarycontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|solutionrelative:mydictionaryapp\\dictionarycontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|f:\\fpt university\\semester 7\\prn221\\project\\my-dictionary-app\\mydictionaryapp\\dictionarycontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|solutionrelative:mydictionaryapp\\dictionarycontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\mydictionaryapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|solutionrelative:mydictionaryapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\mydictionaryapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|solutionrelative:mydictionaryapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|f:\\fpt university\\semester 7\\prn221\\project\\my-dictionary-app\\mydictionaryapp\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D41173FF-1878-4B49-A6A2-B99D67EAE9BE}|MyDictionaryApp\\MyDictionaryApp.csproj|solutionrelative:mydictionaryapp\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,77 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WordTypeControl.xaml",
-              "DocumentMoniker": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\WordTypeControl.xaml",
-              "RelativeDocumentMoniker": "MyDictionaryApp\\WordTypeControl.xaml",
-              "ToolTip": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\WordTypeControl.xaml",
-              "RelativeToolTip": "MyDictionaryApp\\WordTypeControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-24T20:09:29.389Z",
+              "DocumentIndex": 0,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "MyDictionaryApp\\Login.xaml.cs",
+              "ToolTip": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\Login.xaml.cs",
+              "RelativeToolTip": "MyDictionaryApp\\Login.xaml.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAADwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T16:54:01.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WordTypeControl.xaml.cs",
-              "DocumentMoniker": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\WordTypeControl.xaml.cs",
-              "RelativeDocumentMoniker": "MyDictionaryApp\\WordTypeControl.xaml.cs",
-              "ToolTip": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\WordTypeControl.xaml.cs",
-              "RelativeToolTip": "MyDictionaryApp\\WordTypeControl.xaml.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAAwEcAAAAGAAAA",
+              "DocumentIndex": 1,
+              "Title": "Register.xaml.cs",
+              "DocumentMoniker": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\Register.xaml.cs",
+              "RelativeDocumentMoniker": "MyDictionaryApp\\Register.xaml.cs",
+              "ToolTip": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\Register.xaml.cs",
+              "RelativeToolTip": "MyDictionaryApp\\Register.xaml.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAADwv2kAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T20:09:10.671Z",
+              "WhenOpened": "2024-10-28T16:28:18.791Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DictionaryControl.xaml.cs",
-              "DocumentMoniker": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\DictionaryControl.xaml.cs",
-              "RelativeDocumentMoniker": "MyDictionaryApp\\DictionaryControl.xaml.cs",
-              "ToolTip": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\DictionaryControl.xaml.cs",
-              "RelativeToolTip": "MyDictionaryApp\\DictionaryControl.xaml.cs",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAwwIcAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T19:00:16.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DictionaryControl.xaml",
-              "DocumentMoniker": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\DictionaryControl.xaml",
-              "RelativeDocumentMoniker": "MyDictionaryApp\\DictionaryControl.xaml",
-              "ToolTip": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\DictionaryControl.xaml",
-              "RelativeToolTip": "MyDictionaryApp\\DictionaryControl.xaml",
+              "Title": "Register.xaml",
+              "DocumentMoniker": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\Register.xaml",
+              "RelativeDocumentMoniker": "MyDictionaryApp\\Register.xaml",
+              "ToolTip": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\Register.xaml",
+              "RelativeToolTip": "MyDictionaryApp\\Register.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-24T19:35:02.769Z",
+              "WhenOpened": "2024-10-28T16:21:48.458Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MyDictionaryApp\\MainWindow.xaml",
-              "ToolTip": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\MainWindow.xaml",
-              "RelativeToolTip": "MyDictionaryApp\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-22T16:49:03.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MyDictionaryApp\\MainWindow.xaml.cs",
-              "ToolTip": "F:\\FPT University\\Semester 7\\PRN221\\Project\\My-Dictionary-App\\MyDictionaryApp\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MyDictionaryApp\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowDMAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T07:23:39.96Z"
             }
           ]
         }
