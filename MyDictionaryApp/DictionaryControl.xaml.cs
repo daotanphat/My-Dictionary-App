@@ -34,6 +34,7 @@ namespace MyDictionaryApp
 			if (!isAdmin)
 			{
 				btnDeleteWord.Visibility = Visibility.Collapsed;
+				btnAddWord.Content = "Suggest Word";
 			}
 			LoadDictionary();
 			LoadWordTypes();

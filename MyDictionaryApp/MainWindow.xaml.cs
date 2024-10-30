@@ -25,6 +25,7 @@ namespace MyDictionaryApp
 				mnType.Visibility = Visibility.Collapsed;
 				mnApprovedWord.Visibility = Visibility.Collapsed;
 			}
+			ContentArea.Content = new DictionaryControl(isAdmin);
 		}
 
 		private void mnLogout_Click(object sender, RoutedEventArgs e)

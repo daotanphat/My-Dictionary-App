@@ -153,20 +153,29 @@ namespace DataAccess
 						throw new Exception("Word is not exist!");
 					}
 
-					Dictionary duplicatedWord = myDB.Dictionaries
-						.Include(d => d.WordTypeNavigation)
-						.FirstOrDefault(d => d.Word.ToLower().Equals(word.Word.ToLower())
-												&& d.WordType == word.WordType);
-					if (duplicatedWord != null)
+					if (word.Word.ToLower().Equals(existWord.Word.ToLower()) && word.WordType == existWord.WordType)
 					{
-						throw new Exception($"{word.Word} - {duplicatedWord.WordTypeNavigation.TypeName} is already exist!");
+						existWord.Vietnamese = word.Vietnamese;
+						existWord.Meaning = word.Meaning;
+						myDB.SaveChanges();
 					}
+					else
+					{
+						Dictionary duplicatedWord = myDB.Dictionaries
+												.Include(d => d.WordTypeNavigation)
+												.FirstOrDefault(d => d.Word.ToLower().Equals(word.Word.ToLower())
+																		&& d.WordType == word.WordType);
+						if (duplicatedWord != null)
+						{
+							throw new Exception($"{word.Word} - {duplicatedWord.WordTypeNavigation.TypeName} is already exist!");
+						}
 
-					existWord.Word = word.Word;
-					existWord.Vietnamese = word.Vietnamese;
-					existWord.Meaning = word.Meaning;
-					existWord.WordType = word.WordType;
-					myDB.SaveChanges();
+						existWord.Word = word.Word;
+						existWord.Vietnamese = word.Vietnamese;
+						existWord.Meaning = word.Meaning;
+						existWord.WordType = word.WordType;
+						myDB.SaveChanges();
+					}
 
 					EditHistory editHistory = new EditHistory
 					{

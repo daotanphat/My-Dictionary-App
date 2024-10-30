@@ -13,6 +13,7 @@ namespace DataAccess.Repository
 		WordType getWordTypeById(int wordTypeId);
 		void addWordType(WordType wordType);
 		void deleteWordType(int wordTypeId);
+		void deleteWordTypes(List<int> wordTypeIds);
 		void updateWordType(int wordTypeId, WordType wordType);
 	}
 }

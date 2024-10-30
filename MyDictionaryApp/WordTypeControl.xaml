@@ -27,7 +27,7 @@
 
             </Grid>
             <!-- ListView to display members' information -->
-            <ListView x:Name="lvWordType" Height="300" Width="530" Margin="10" SelectionMode="Single" MouseDoubleClick="lvWordType_MouseDoubleClick">
+            <ListView x:Name="lvWordType" Height="300" Width="530" Margin="10" SelectionMode="Multiple" MouseDoubleClick="lvWordType_MouseDoubleClick">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ID" Width="40" DisplayMemberBinding="{Binding Id}" />

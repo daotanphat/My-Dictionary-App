@@ -108,6 +108,46 @@ namespace DataAccess
 			}
 		}
 
+		public void DeleteWordTypes(List<int> wordTypeIds)
+		{
+			try
+			{
+				using (var myDB = new MyDictionaryContext())
+				{
+					foreach (var wordTypeId in wordTypeIds)
+					{
+						WordType wordType = myDB.WordTypes.FirstOrDefault(w => w.Id == wordTypeId);
+						if (wordType == null)
+						{
+							throw new Exception($"Word Type does not exist!");
+						}
+
+						List<Dictionary> words = myDB.Dictionaries
+						.Include(w => w.WordTypeNavigation)
+						.Where(w => w.WordTypeNavigation.Id == wordTypeId)
+						.ToList();
+						myDB.Dictionaries.RemoveRange(words);
+
+						List<int> wordIds = words.Select(w => w.Id).ToList();
+						if (wordIds.Any())
+						{
+							List<EditHistory> editHistories = myDB.EditHistories
+							.Where(e => wordIds.Contains(e.WordId))
+							.ToList();
+							myDB.EditHistories.RemoveRange(editHistories);
+						}
+
+						myDB.WordTypes.Remove(wordType);
+					}
+					myDB.SaveChanges();
+				}
+			}
+			catch (Exception ex)
+			{
+				throw new Exception(ex.Message);
+			}
+		}
+
 		public void updateWordType(int wordTypeId, WordType wordType)
 		{
 			try

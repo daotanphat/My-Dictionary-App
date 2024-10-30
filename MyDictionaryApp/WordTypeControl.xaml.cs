@@ -71,17 +71,26 @@ namespace MyDictionaryApp
 		{
 			try
 			{
-
-				if (lvWordType.SelectedItem is WordType selectedType)
+				var selectedItems = lvWordType.SelectedItems;
+				if (selectedItems.Count > 0)
 				{
-					wordTypeRepository.deleteWordType(selectedType.Id);
+					List<int> wordTypeIds = new List<int>();
+					foreach (var item in selectedItems)
+					{
+						var selectedItem = item as WordType;
+						if (selectedItem != null)
+						{
+							wordTypeIds.Add(selectedItem.Id);
+						}
+					}
+					wordTypeRepository.deleteWordTypes(wordTypeIds);
 					LoadWordType();
 					MessageBox.Show("Delete word type successfully!");
 				}
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, "Delete word");
+				MessageBox.Show(ex.Message, "Delete word type");
 			}
 		}
 	}
