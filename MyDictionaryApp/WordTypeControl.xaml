@@ -11,22 +11,15 @@
             <Grid Margin="0 0 0 10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <!-- Empty space on the left -->
                     <ColumnDefinition Width="Auto" />
-                    <!-- For filter section -->
                 </Grid.ColumnDefinitions>
 
-                <!-- Buttons for adding and deleting words -->
                 <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <!-- Add Button -->
                     <Button x:Name="btnAddType" Width="50" Height="25" Content="Add" Margin="10,0,5,0" Click="btnAddType_Click"/>
-                    <!-- Delete Button -->
                     <Button x:Name="btnDeleteType" Width="50" Height="25" Content="Delete" Click="btnDeleteType_Click"/>
                 </StackPanel>
-                <!-- Button on the right side -->
 
             </Grid>
-            <!-- ListView to display members' information -->
             <ListView x:Name="lvWordType" Height="300" Width="530" Margin="10" SelectionMode="Multiple" MouseDoubleClick="lvWordType_MouseDoubleClick">
                 <ListView.View>
                     <GridView>

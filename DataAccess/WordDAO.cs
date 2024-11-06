@@ -126,6 +126,7 @@ namespace DataAccess
 						OldVietnamese = word.Vietnamese,
 						NewWord = word.Word,
 						NewVietnamese = word.Vietnamese,
+						Type = myDB.WordTypes.FirstOrDefault(t => t.Id == word.WordType).TypeName,
 						EditBy = word.CreateBy
 					};
 					myDB.EditHistories.Add(editHistory);
@@ -151,6 +152,15 @@ namespace DataAccess
 					if (existWord == null)
 					{
 						throw new Exception("Word is not exist!");
+					}
+
+					if (word.Word.ToLower().Equals(existWord.Word.ToLower())
+						&& word.Meaning == existWord.Meaning
+						&& word.WordType == existWord.WordType
+						&& word.Vietnamese.ToLower().Equals(existWord.Vietnamese.ToLower())
+						)
+					{
+						throw new Exception("You not update anything!");
 					}
 
 					if (word.Word.ToLower().Equals(existWord.Word.ToLower()) && word.WordType == existWord.WordType)
@@ -184,6 +194,7 @@ namespace DataAccess
 						OldVietnamese = existWord.Vietnamese,
 						NewWord = word.Word,
 						NewVietnamese = word.Vietnamese,
+						Type = myDB.WordTypes.FirstOrDefault(w => w.Id == word.WordType).TypeName,
 						EditBy = word.CreateBy
 					};
 					myDB.EditHistories.Add(editHistory);
@@ -268,6 +279,7 @@ namespace DataAccess
 				{
 					editHistories = myDB.EditHistories
 						.Include(e => e.EditByNavigation)
+						.Include(e => e.Word)
 						.Where(e => e.WordId == wordId)
 						.OrderByDescending(e => e.EditDate)
 						.ToList();
@@ -278,6 +290,75 @@ namespace DataAccess
 				throw new Exception(ex.Message);
 			}
 			return editHistories;
+		}
+
+		public void RollBack(int wordId)
+		{
+			List<EditHistory> editHistories = new List<EditHistory>();
+			try
+			{
+				using (var myDB = new MyDictionaryContext())
+				{
+					editHistories = myDB.EditHistories
+						.Include(e => e.EditByNavigation)
+						.Include(e => e.Word)
+						.Where(e => e.WordId == wordId)
+						.OrderByDescending(e => e.EditDate)
+						.ToList();
+
+					if (editHistories.Count() < 2)
+					{
+						throw new Exception("Can not roll back because your data is newest");
+					}
+
+					EditHistory editHistory = editHistories[1];
+
+					Dictionary word = new Dictionary
+					{
+						Word = editHistory.NewWord,
+						Vietnamese = editHistory.NewVietnamese,
+						Meaning = editHistory.Word.Meaning,
+						WordType = myDB.WordTypes.FirstOrDefault(w => w.TypeName.ToLower().Equals(editHistory.Type)).Id,
+						CreateBy = editHistory.Word.CreateBy,
+					};
+
+					Dictionary existWord = myDB.Dictionaries
+						.Include(d => d.WordTypeNavigation)
+						.FirstOrDefault(d => d.Id == wordId);
+
+					Dictionary duplicatedWord = myDB.Dictionaries
+											.Include(d => d.WordTypeNavigation)
+											.FirstOrDefault(d => d.Word.ToLower().Equals(word.Word.ToLower())
+																	&& d.WordType == word.WordType);
+					if (duplicatedWord != null)
+					{
+						throw new Exception($"Can not roll back data because {word.Word} - {duplicatedWord.WordTypeNavigation.TypeName} is already exist!");
+					}
+
+					existWord.Word = word.Word;
+					existWord.Vietnamese = word.Vietnamese;
+					existWord.Meaning = word.Meaning;
+					existWord.WordType = word.WordType;
+					myDB.SaveChanges();
+
+					EditHistory editHistory1 = new EditHistory
+					{
+						WordId = wordId,
+						OldWord = existWord.Word,
+						OldVietnamese = existWord.Vietnamese,
+						NewWord = word.Word,
+						NewVietnamese = word.Vietnamese,
+						Type = myDB.WordTypes.FirstOrDefault(w => w.Id == word.WordType).TypeName,
+						EditBy = word.CreateBy
+					};
+					myDB.EditHistories.Add(editHistory1);
+					myDB.SaveChanges();
+				}
+			}
+			catch (Exception ex)
+			{
+				throw new Exception(ex.Message);
+			}
 		}
 	}
 }

@@ -118,7 +118,7 @@ namespace MyDictionaryApp
 			txtWordId.Text = wordId.ToString();
 			txtWord.Text = word.Word.ToString();
 			txtVietnamese.Text = word.Vietnamese.ToString();
-			txtDefinition.Text = word.Meaning.ToString();
+			txtDefinition.Text = word.Meaning == null ? "" : word.Meaning.ToString();
 			cboWordType.SelectedValue = word.WordType;
 		}
 
@@ -126,12 +126,12 @@ namespace MyDictionaryApp
 		{
 			bool valid = true;
 			string msg = "";
-			if (string.IsNullOrEmpty(txtWord.Text))
+			if (string.IsNullOrEmpty(txtWord.Text.Trim()))
 			{
 				msg += "Word can not be empty!\n";
 				valid = false;
 			}
-			if (string.IsNullOrEmpty(txtVietnamese.Text))
+			if (string.IsNullOrEmpty(txtVietnamese.Text.Trim()))
 			{
 				msg += "Meaning in Vietnamese can not be empty!\n";
 				valid = false;
@@ -174,6 +174,32 @@ namespace MyDictionaryApp
 			{
 				MessageBox.Show(ex.Message, "Error Message");
 			}
+		}
+
+		private void btnRollBack_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void btnRollBack_Click_1(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void btnRollBack_Click_2(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				wordRepository.RollBackEdit(Convert.ToInt32(txtWordId.Text));
+				WordLoad?.Invoke(this, EventArgs.Empty);
+				MessageBox.Show("Roll back data success", "Roll Back");
+				this.Close();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Roll Back");
+			}
+
 		}
 	}
 }

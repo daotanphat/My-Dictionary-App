@@ -11,30 +11,21 @@
             <Grid Margin="0 0 0 10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <!-- Empty space on the left -->
                     <ColumnDefinition Width="Auto" />
-                    <!-- For filter section -->
                 </Grid.ColumnDefinitions>
 
-                <!-- Filter controls wrapped in a StackPanel for vertical alignment -->
                 <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <!-- Search Textbox with Watermark -->
                     <TextBox x:Name="txtSearch" Width="160" Height="25" Margin="0 10 10 0" />
 
-                    <!-- Dropdown for Type -->
                     <ComboBox x:Name="cbType" Width="100" Height="25" Margin="0 10 10 0" />
 
-                    <!-- Filter Button -->
                     <Button x:Name="btnFilter" Width="50" Height="25" Content="Filter" Click="btnFilter_Click"/>
                 </StackPanel>
 
-                <!-- Buttons for adding and deleting words -->
                 <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <!-- Delete Button -->
                     <Button x:Name="btnDeleteWord" Width="50" Height="25" Content="Delete" Click="btnDeleteWord_Click"/>
                 </StackPanel>
             </Grid>
-            <!-- ListView to display members' information -->
             <ListView x:Name="lvApprovedWord" Height="300" Width="530" Margin="10" SelectionMode="Multiple" MouseDoubleClick="lvApprovedWord_MouseDoubleClick">
                 <ListView.View>
                     <GridView>

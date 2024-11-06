@@ -35,7 +35,8 @@ namespace MyDictionaryApp
 			try
 			{
 				lvHistory.ItemsSource = wordRepository.GetEditHistory(wordId);
-			}catch (Exception ex)
+			}
+			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message, "Edit Histories");
 			}

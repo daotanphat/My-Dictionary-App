@@ -44,6 +44,11 @@ namespace DataAccess.Repository
 			return WordDAO.Instance.GetWordsByFilter(approved, search, type);
 		}
 
+		public void RollBackEdit(int wordId)
+		{
+			WordDAO.Instance.RollBack(wordId);
+		}
+
 		public void UpdateWord(int wordId, Dictionary word)
 		{
 			WordDAO.Instance.UpdateWord(wordId, word);

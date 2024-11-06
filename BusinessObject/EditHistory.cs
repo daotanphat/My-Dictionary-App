@@ -12,7 +12,8 @@ namespace BusinessObject
         public string NewWord { get; set; } = null!;
         public string NewVietnamese { get; set; } = null!;
         public DateTime EditDate { get; set; }
-        public int EditBy { get; set; }
+		public string? Type { get; set; }
+		public int EditBy { get; set; }
 
         public virtual User EditByNavigation { get; set; } = null!;
         public virtual Dictionary Word { get; set; } = null!;

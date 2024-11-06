@@ -17,5 +17,7 @@ namespace DataAccess.Repository
 		bool ApprovedWord(int wordId, bool approved);
 		void DeleteWord(List<int> wordIds);
 		IEnumerable<EditHistory> GetEditHistory(int wordId);
+
+		void RollBackEdit(int wordId);
 	}
 }
